@@ -6,13 +6,12 @@ public:
         vector<int> ret(2,0);
         unordered_map<int,int> m;
         
-        int candi;
         for(int i=0; i<nums.size(); ++i){
-            m.insert({nums[i],i});
-            candi = target-nums[i];
-            if(m.find(candi)!=m.end() && i != m[candi]){
+            m.insert({target-nums[i],i});
+            
+            if(m.find(nums[i])!=m.end() && i != m[nums[i]]){
                 ret[0] = i;
-                ret[1] = m[candi];
+                ret[1] = m[nums[i]];
                 break;
             }
         }
