@@ -1,10 +1,10 @@
-#include<unordered_map>
+#include<map>
 
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
         vector<int> ret(2,0);
-        unordered_map<int,int> m;
+        map<int,int> m;
         
         for(int i=0; i<nums.size(); ++i){
             m.insert({nums[i],i});
