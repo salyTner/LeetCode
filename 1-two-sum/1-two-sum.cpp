@@ -12,6 +12,7 @@ public:
                 ret[1] = m[nums[i]];
                 return ret;
             }
+            
             m.insert({target-nums[i],i});
         }
         
